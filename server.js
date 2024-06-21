@@ -12,7 +12,11 @@ import bodyParser from "body-parser";
 dotenv.config();
 
 const app=express()
-app.use(cors());
+app.use(cors({
+    origin:["https://blog-client-theta-eight.vercel.app/login"],
+    methods:["GET","POST","PUT","DELETE"],
+    credentials:true
+}));
 app.use(bodyParser.json({extended:true}))
 app.use(bodyParser.urlencoded({extended:true}))
 
