@@ -13,7 +13,7 @@ conn.once('open',()=>{
 
 })
 
-const url ='http://localhost:8000'
+const url ='http://localhost:8001'
 export const uploadImage=(request,response)=>{
     if(!request.file){
         return response.status(400).json({
